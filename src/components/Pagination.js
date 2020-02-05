@@ -1,7 +1,6 @@
 import React from 'react';
-import { useAvatar } from '../hooks/useAvatar';
 
-export const Pagination = ({page, setPage}) => {
+export const Pagination = ({ page, setPage }) => {
 
   return (
     <>

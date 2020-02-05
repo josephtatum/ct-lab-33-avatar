@@ -6,7 +6,7 @@ import {
   Link 
 } from 'react-router-dom';
 import { Characters } from '../containers/Characters';
-import { Pagination } from './Pagination';
+import { CharacterDetail } from './CharacterDetail';
 import '../styles.css';
 import { Header } from './Header';
 
@@ -17,6 +17,7 @@ export default function App() {
       <Header />
       <Switch>
         <Route exact path="/" component={Characters} />
+        <Route path="/detail/:id" component={CharacterDetail} />
       </Switch>
     </Router>
   );
