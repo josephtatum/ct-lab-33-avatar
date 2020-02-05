@@ -1,7 +1,12 @@
 import React from 'react';
+import { useAvatar } from '../hooks/useAvatar';
 
-export const Pagination = ({ currentPage, totalPages }) => {
+export const Pagination = ({page, setPage}) => {
+
   return (
-    <p>Page {currentPage} of {totalPages}</p>
+    <>
+      <p>Page {page} of Something</p>
+      <button onClick={() => setPage(page + 1)}>Next</button>
+    </>
   );
 };
