@@ -1,12 +1,14 @@
 import React from 'react';
 import { Characters } from '../containers/Characters';
-import { useAvatar } from '../hooks/useAvatar';
+import { Pagination } from './Pagination';
+import '../styles.css';
 
 export default function App() {
-  
-  const { character, characterList } = useAvatar();
-  console.log(characterList);
+
   return (
-    <Characters characterList={characterList}/>
+    <>
+      <Characters />
+      <Pagination />
+    </>
   );
 }
