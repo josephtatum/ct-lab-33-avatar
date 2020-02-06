@@ -5,9 +5,9 @@ import { Pagination } from '../components/Pagination';
 
 export const Characters = () => {
   const { character, characterList, page, nextPage } = useAvatar();
-  
+
   const charactersToRender = characterList.map(character => {
-    return <Character key={character._id} name={character.name} image={character.photoUrl} />;
+    return <Character key={character._id} id={character._id} name={character.name} image={character.photoUrl} />;
   });
 
   return (
