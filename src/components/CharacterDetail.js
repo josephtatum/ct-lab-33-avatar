@@ -1,18 +1,13 @@
 import React from 'react';
 import { useAvatar } from '../hooks/useAvatar';
+import { useAvatarCharacter } from '../hooks/useAvatarCharacter';
 
-export const CharacterDetail = ({ match }) => {
-  const { characterList } = useAvatar();
-
-  const character = characterList.find(character => {
-    return character._id === match.params.id;
-  });
-
+export const CharacterDetail = () => {
+  const { character } = useAvatarCharacter();
   console.log(character);
-
   return (
     <>
-      <p></p>
+      <p>{character.name}</p>
     </>
   );
 };

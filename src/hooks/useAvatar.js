@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react';
 import { getCharacters } from '../services/getCharacters';
+import { getCharacter } from '../services/getCharacter';
 
 export const useAvatar = () => {
 
   const [characterList, setCharacterList] = useState([]);
-  const [character, setCharacter] = useState('');
   const [page, setPage] = useState(1);
 
   useEffect(() => {
@@ -18,5 +18,8 @@ export const useAvatar = () => {
       .then(res => setCharacterList(res));
   };
 
-  return { characterList, character, page, nextPage };
+  return {
+    characterList,
+    page,
+    nextPage };
 };
